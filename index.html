@@ -1,0 +1,55 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Recommendation Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="app-header">
+      <h1 class="title">Movie Recommendation</h1>
+    </header>
+
+    <section class="card">
+      <form id="recoForm" class="grid">
+        <div class="field">
+          <label for="age" class="label">Your age</label>
+          <div class="range-wrap">
+            <input type="range" id="age" name="age" min="5" max="80" value="18" />
+            <span id="ageValue" class="range-bubble">18</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="genre" class="label">Genre</label>
+          <select id="genre" name="genre" class="select">
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn">Get Recommendation</button>
+          <button type="button" id="surpriseBtn" class="btn btn-ghost">Surprise me</button>
+        </div>
+      </form>
+
+      <div id="status" role="status" aria-live="polite" class="status"></div>
+      <div id="results" class="results"></div>
+    </section>
+
+    <footer class="footer">
+      <small></small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
